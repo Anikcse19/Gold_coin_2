@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="flex flex-col justify-between items-center gap-2 border-r border-[#FFC107] bg-black py-2">
         <div>
           <svg
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -22,14 +22,14 @@ export default function Footer() {
             />
           </svg>
         </div>
-        <div>Crypto</div>
+        <div className="text-[10px]">Crypto</div>
       </div>
 
-      <div className="flex flex-col justify-between items-center gap-2 border-r border-[#FFC107] bg-black py-2">
+      <div className="flex flex-col justify-between items-center gap-2  bg-black py-2">
         <div>
           <svg
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,14 +47,14 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
-        <div>Market</div>
+        <div className="text-[10px]">Market</div>
       </div>
 
-      <div className="flex flex-col justify-between items-center gap-2 text-[#141414] border-r border-[#FFC107] pt-5 bg-[#FFC107] rounded-t-3xl">
+      <div className="flex flex-col justify-between items-center gap-2 text-[#141414]  pt-5 bg-[#FFC107] rounded-t-3xl">
         <div>
           <svg
-            width="40"
-            height="40"
+            width="30"
+            height="30"
             viewBox="0 0 40 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,14 +76,14 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
-        <div>Home</div>
+        <div className="text-[10px]">Home</div>
       </div>
 
       <div className="flex flex-col justify-between items-center gap-2 border-r border-[#FFC107] bg-black py-2">
         <div>
           <svg
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +133,13 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
-        <div>Trade</div>
+        <div className="text-[10px]">Trade</div>
       </div>
       <div className="flex flex-col justify-between items-center gap-2 bg-black py-2">
         <div>
           <svg
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export default function Footer() {
             />
           </svg>
         </div>
-        <div>Profile</div>
+        <div className="text-[10px]">Profile</div>
       </div>
     </footer>
   );
