@@ -1,9 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Image } from '../utils/Image';
-
 const Navbar = () => {
-  const location = useLocation();
-
   return (
     <nav className="p-3 flex items-center bg-black justify-between">
       <div>

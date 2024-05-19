@@ -1,6 +1,4 @@
-import { Image } from '../utils/Image';
-
-const iconNames = ['notion', 'google', 'asana', 'github', 'webflow', 'tinder'];
+// const iconNames = ['notion', 'google', 'asana', 'github', 'webflow', 'tinder'];
 
 export default function Footer() {
   return (
