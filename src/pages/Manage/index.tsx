@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Manage = () => {
-  const [currentDynamicComp, setCurrentDynamicComp]: any = 'overview';
+  const [currentDynamicComp, setCurrentDynamicComp] = useState('Overview');
 
   return (
     <div>
@@ -37,6 +37,8 @@ const Manage = () => {
           </li>
         </ul>
       </nav>
+
+      <div>{currentDynamicComp}</div>
     </div>
   );
 };
