@@ -32,7 +32,7 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'manage/overview',
+        path: 'manage',
         element: <Manage />,
       },
       {
