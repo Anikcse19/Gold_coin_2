@@ -1,16 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
-import NotFound from '../pages/NotFound';
-import Home from '../pages/Home';
-import { useViewerModeStore } from '../stores/viewermode';
 import ForgetPass from '../pages/ForgetPass';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
+import NotFound from '../pages/NotFound';
 import Register from '../pages/Register';
+import { useViewerModeStore } from '../stores/viewermode';
 
 const RouteSwitcher = () => {
   const { viewMode } = useViewerModeStore();
 
   if (viewMode === 'candidate') {
-    return <Home />;
+    return <Login />;
   } else {
     return '';
   }
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
       {
         index: true,
         element: <RouteSwitcher />,
+      },
+      {
+        path: 'home',
+        element: <Home />,
       },
       {
         path: 'forget-password',
