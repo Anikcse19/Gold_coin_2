@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import Register from '../pages/Register';
 import { useViewerModeStore } from '../stores/viewermode';
+import Manage from '../pages/Manage/index';
 
 const RouteSwitcher = () => {
   const { viewMode } = useViewerModeStore();
@@ -29,6 +30,10 @@ const routes = createBrowserRouter([
       {
         path: 'home',
         element: <Home />,
+      },
+      {
+        path: 'manage/overview',
+        element: <Manage />,
       },
       {
         path: 'forget-password',
