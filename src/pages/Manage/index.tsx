@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
 
+import ManageOverview from '../../components/Manage/Overview';
+import ManageSpot from '../../components/Manage/Spot';
+import ManageFunding from '../../components/Manage/Funding';
+import ManageEarn from '../../components/Manage/Earn';
+
+const componentMap: { [key: string]: React.FC } = {
+  ManageOverview,
+  ManageSpot,
+  ManageFunding,
+  ManageEarn,
+};
+
 const Manage = () => {
-  const [currentDynamicComp, setCurrentDynamicComp] = useState('Overview');
+  const [currentDynamicComp, setCurrentDynamicComp] =
+    useState('ManageOverview');
+
+  const CurrentComponent = componentMap[currentDynamicComp];
 
   return (
     <div>
@@ -9,28 +24,28 @@ const Manage = () => {
         <ul className="flex justify-between font-bold text-xl px-3 py-6">
           <li
             onClick={() => {
-              setCurrentDynamicComp('Overview');
+              setCurrentDynamicComp('ManageOverview');
             }}
           >
             Overview
           </li>
           <li
             onClick={() => {
-              setCurrentDynamicComp('Spot');
+              setCurrentDynamicComp('ManageSpot');
             }}
           >
             Spot
           </li>
           <li
             onClick={() => {
-              setCurrentDynamicComp('Funding');
+              setCurrentDynamicComp('ManageFunding');
             }}
           >
             Funding
           </li>
           <li
             onClick={() => {
-              setCurrentDynamicComp('Earn');
+              setCurrentDynamicComp('ManageEarn');
             }}
           >
             Earn
@@ -38,7 +53,9 @@ const Manage = () => {
         </ul>
       </nav>
 
-      <div>{currentDynamicComp}</div>
+      <div>
+        <CurrentComponent />
+      </div>
     </div>
   );
 };
