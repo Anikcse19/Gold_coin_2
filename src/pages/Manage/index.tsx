@@ -19,10 +19,11 @@ const Manage = () => {
   const CurrentComponent = componentMap[currentDynamicComp];
 
   return (
-    <div>
+    <div className="min-h-screen px-4">
       <nav>
-        <ul className="flex justify-between font-bold text-xl px-3 py-6">
+        <ul className="flex justify-between text-xl py-6">
           <li
+            className={`${currentDynamicComp === 'ManageOverview' && 'font-bold'}`}
             onClick={() => {
               setCurrentDynamicComp('ManageOverview');
             }}
@@ -30,6 +31,7 @@ const Manage = () => {
             Overview
           </li>
           <li
+            className={`${currentDynamicComp === 'ManageSpot' && 'font-bold'}`}
             onClick={() => {
               setCurrentDynamicComp('ManageSpot');
             }}
@@ -37,6 +39,7 @@ const Manage = () => {
             Spot
           </li>
           <li
+            className={`${currentDynamicComp === 'ManageFunding' && 'font-bold'}`}
             onClick={() => {
               setCurrentDynamicComp('ManageFunding');
             }}
@@ -44,6 +47,7 @@ const Manage = () => {
             Funding
           </li>
           <li
+            className={`${currentDynamicComp === 'ManageEarn' && 'font-bold'}`}
             onClick={() => {
               setCurrentDynamicComp('ManageEarn');
             }}
