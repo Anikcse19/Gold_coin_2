@@ -2,95 +2,66 @@ const Overview = () => {
   const balanceData = [
     {
       id: 1,
-      name: 'GOLD',
-      coin_type: 'Gold Coin',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '+$50.65(1.25%)',
+      name: 'Spot',
+      value:"2424",
+      dailys_pnl:'+$2213(11.25%)'
     },
     {
       id: 2,
-      name: 'BTC',
-      coin_type: 'BitCoin',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '+$50.65(1.25%)',
+      name: 'Funding',
+      value:"23232"
     },
     {
       id: 3,
-      name: 'BNB',
-      coin_type: 'BNB',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '+$50.65(1.25%)',
+      name: 'Earn',
+      value:"543"
     },
     {
       id: 4,
-      name: 'ETH',
-      coin_type: 'Ethereum',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '-$10.65(0.25%)',
+      name: 'Funding',
+      value:"778787"
     },
     {
       id: 5,
-      name: 'USDT',
-      coin_type: 'Tether',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '+$50.65(1.25%)',
+      name: 'Funding',
+      value:"768989"
     },
     {
       id: 6,
-      name: 'DOGE',
-      coin_type: 'Dogecoin',
-      total_price: '759.788987',
-      average_cost: '$1.03',
-      todays_pnl: '+$50.65(1.25%)',
+      name: 'Funding',
+      value:"2223"
     },
   ];
 
   return (
     <div>
-      <h2 className="font-bold">Total Balance</h2>
+     
       <div className="flex justify-between items-center">
-        <div className="flex flex-col gap-4">
-          <h2 className="text-[32px] font-bold">$2,230.75</h2>
-          <p>Today's Profit/Loss</p>
-          <p>+$50.65(1.25%)</p>
+        <div className="self-start flex flex-col gap-1">
+        <h2 className="font-bold">Total Balance</h2>
+        <p>$27127</p>
         </div>
-        <div className="flex flex-col gap-2.5 font-bold">
-          <button className="bg-[#FFD200] px-8 py-2 rounded-md text-black">
-            Deposite
-          </button>
-          <button className="bg-[#07CCA8] px-8 py-2 rounded-md text-black">
-            Withdraw
-          </button>
-          <button className="bg-[#DC3545] px-8 py-2 rounded-md text-black">
-            Transfer
-          </button>
+        <div className="flex flex-col gap-2.5">
+          <div>Today's PNL</div>
+         <div className="text-green-700">$1212(1.11%)</div>
+          
         </div>
       </div>
+      <div className="flex justify-between items-center my-2">
+        <button className="bg-[#FFD200] px-8 py-2 rounded-md text-black">
+            Deposit
+          </button>
+          <button className="bg-[#313B47] px-8 py-2 rounded-md text-white">
+            Withdraw
+          </button>
+          </div>
       <div className="h-[1px] w-full bg-[#6C6C6C] my-4"></div>
 
       <div className="flex flex-col">
         <div className="flex justify-between items-center">
-          <div className="text-[22px] font-bold">Balances</div>
+          <div className="text-[22px] font-bold">Account</div>
           <div className="flex gap-[44px]">
-            <div>
-              <svg
-                width="18"
-                height="20"
-                viewBox="0 0 18 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.03676 1.94677C1.53154 3.2051 0.60639 4.97451 0.431916 6.92866C0.257335 8.88282 0.854417 10.7881 2.11274 12.2933C3.79106 14.3006 6.4362 15.2681 9.01617 14.8179C9.83077 14.6758 10.6146 14.3946 11.3339 13.9918L15.5726 19.0617L17.6596 17.3168L13.4217 12.2478C14.3569 11.1154 14.9307 9.72983 15.0642 8.23529C15.2387 6.28115 14.6416 4.37601 13.3833 2.87068C11.7051 0.86332 9.05981 -0.1041 6.47995 0.346014C5.21628 0.566488 4.02563 1.11997 3.03676 1.94677ZM11.2962 4.6156C12.0885 5.56331 12.4644 6.76297 12.3545 7.99336C12.2447 9.22375 11.6622 10.3378 10.7144 11.1301C10.0915 11.6509 9.3425 11.9994 8.54858 12.138C6.92312 12.4216 5.25679 11.8125 4.19993 10.5484C3.40759 9.60064 3.03172 8.40109 3.14168 7.17057C3.25155 5.94018 3.83407 4.82616 4.78177 4.03372C5.40462 3.51302 6.15361 3.16451 6.94753 3.026C8.5731 2.74238 10.2393 3.3515 11.2962 4.6156Z"
-                  fill="#727171"
-                />
-              </svg>
-            </div>
+            
             <div>
               <svg
                 width="20"
@@ -156,19 +127,29 @@ const Overview = () => {
                       <div className="text-[22px] text-white font-bold">
                         {data.name}
                       </div>
-                      <div>{data.coin_type}</div>
+                      {/* <div>{data.coin_type}</div> */}
                     </div>
-                    <div>
-                      <div>Average cost</div>
-                      <div>Today's PNL</div>
-                    </div>
+                    {
+                      data?.dailys_pnl && (
+                        <div>
+                        <div className="text-gray-600">Daily's PNL%</div>
+                       
+                      </div>
+                      )
+                    }
+                    
                   </div>
-                  <div className="flex flex-col justify-between">
-                    <div>{data.total_price}</div>
-                    <div className="flex flex-col gap-1.5">
-                      <div>{data.average_cost}</div>
-                      <div className="text-[#07CCA8]">{data.todays_pnl}</div>
-                    </div>
+                  <div className="flex flex-col justify-between items-end">
+                    <div>${data.value}</div>
+                    {
+                      data?.dailys_pnl && (
+                        
+                        <div className="text-green-700">{data.dailys_pnl}</div>
+                        
+                      
+                      )
+                    }
+                   
                   </div>
                 </div>
               </div>

@@ -1,8 +1,7 @@
 // const iconNames = ['notion', 'google', 'asana', 'github', 'webflow', 'tinder'];
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 export default function Footer() {
-
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <footer className="w-full grid grid-cols-5 pt-4 justify-center items-end">
       <div className="flex flex-col justify-between items-center gap-2 border-r border-[#FFC107] bg-black py-2">
@@ -78,9 +77,14 @@ export default function Footer() {
             </defs>
           </svg>
         </div>
-        <div onclick={()=>{
-      navigate('/home')
-        }} className="text-[8px]">Home</div>
+        <div
+          onClick={() => {
+            navigate('/home');
+          }}
+          className="text-[8px]"
+        >
+          Home
+        </div>
       </div>
 
       <div className="flex flex-col justify-between items-center gap-2 border-r border-[#FFC107] bg-black py-2">
