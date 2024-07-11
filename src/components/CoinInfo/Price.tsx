@@ -2,9 +2,112 @@ import { CgOptions } from 'react-icons/cg';
 import { FaCaretDown } from 'react-icons/fa';
 import AreaChart from '../Charts/AreaChart';
 import BarChart from '../Charts/BarChart';
+import { IoMdArrowDropdown } from 'react-icons/io';
+
 // import BarChart from '../Charts/BarChart';
 
 const Price = () => {
+  const dateWisePriceUpDown = [
+    {
+      time: 'Today',
+      value: -1.11,
+    },
+    {
+      time: '7 days',
+      value: 3.11,
+    },
+    {
+      time: '30 days',
+      value: 24.11,
+    },
+    {
+      time: '90 days',
+      value: 33.51,
+    },
+    {
+      time: '180 days',
+      value: 85.34,
+    },
+    {
+      time: '1 year',
+      value: 155.43,
+    },
+  ];
+
+  const data2 = [
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+    {
+      bid: 119.08,
+      ask: {
+        up: 11.11,
+        down: 3.33,
+      },
+      point: 119.3,
+    },
+  ];
   return (
     <div>
       {/* price details start */}
@@ -71,6 +174,66 @@ const Price = () => {
       {/* bar chart start */}
       <div>
         <BarChart />
+      </div>
+
+      {/* unknown one */}
+      <div className="">
+        <div className="w-full flex items-center justify-between">
+          {['MA', 'EMA', 'BOLL', 'SAR', 'AVL', 'VOL', 'MACD', 'RDI'].map(
+            (x, i) => (
+              <span key={i}>{x}</span>
+            ),
+          )}
+        </div>
+      </div>
+
+      {/* unkonwn two */}
+      <div className="mt-5 border-b border-slate-600 pb-4">
+        <div className="flex items-center justify-between">
+          {dateWisePriceUpDown.map((e, i) => (
+            <div key={i} className="flex flex-col justify-center gap-0.5">
+              <span className="text-xs text-gray-500 font-bold">{e.time}</span>
+              <span
+                className={`text-xs ${e.value > 0 ? 'text-green-500' : 'text-red-600'} `}
+              >
+                {e.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full mt-10 flex flex-col gap-3">
+        <div className="flex items-center gap-3">
+          <span className="bg-gray-600 font-bold px-2 py-1 rounded-md">
+            Order Book
+          </span>
+          <span>Trade</span>
+        </div>
+
+        <div className="w-full flex items-center gap-2">
+          <div className="w-[50%] flex items-center gap-1">
+            <p className="text-sm text-green-400">50.34%</p>
+            <span className="h-2 w-full bg-green-400 rounded-sm" />
+          </div>
+          <div className="w-[50%] flex items-center gap-1">
+            <p className="text-sm text-red-600">49.64%</p>
+            <span className="h-2 w-full bg-red-600 rounded-sm" />
+          </div>
+        </div>
+
+        <div>
+          <div className="flex items-center justify-between text-stone-400 font-bold">
+            <span>Bid</span>
+            <span>Ask</span>
+            <span className="bg-gray-500 text-gray-200 px-2 rounded-md flex items-center">
+              <p>0.1</p>
+              <IoMdArrowDropdown className="text-xl" />
+            </span>
+          </div>
+
+          <div>{}</div>
+        </div>
       </div>
     </div>
   );

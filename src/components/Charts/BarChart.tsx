@@ -1,35 +1,94 @@
-import { useState } from 'react';
-// import ReactApexChart from 'react-apexcharts';
-import Chart from 'react-apexcharts';
+import React from 'react';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
-const BarChart = () => {
-  const [chartData] = useState({
-    options: {
-      chart: {
-        id: 'basic-bar',
-      },
-      xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
-      },
-    },
-    series: [
-      {
-        name: 'series-1',
-        data: [30, 40, 45, 50, 49, 60, 70, 91],
-      },
-    ],
-  });
-  return (
-    <div id="chart">
-      <Chart
-        options={chartData.options}
-        series={chartData.series}
-        type="bar"
-        width="1000px"
-        height={200}
-      />
-    </div>
-  );
-};
+// Define the type for the data
+interface DataType {
+  year: string;
+  price: number;
+  value: number;
+}
 
-export default BarChart;
+const data: DataType[] = [
+  {
+    year: '2000',
+    price: 12,
+    value: 11,
+  },
+  {
+    year: '2001',
+    price: 14,
+    value: 26,
+  },
+  {
+    year: '2002',
+    price: 15,
+    value: 18,
+  },
+  {
+    year: '2003',
+    price: 16,
+    value: 12,
+  },
+  {
+    year: '2004',
+    price: 20,
+    value: 25,
+  },
+  {
+    year: '2005',
+    price: 24,
+    value: 22,
+  },
+  {
+    year: '2006',
+    price: 29,
+    value: 24,
+  },
+  {
+    year: '2000',
+    price: 12,
+    value: 11,
+  },
+  {
+    year: '2001',
+    price: 14,
+    value: 26,
+  },
+  {
+    year: '2002',
+    price: 15,
+    value: 18,
+  },
+  {
+    year: '2003',
+    price: 16,
+    value: 12,
+  },
+];
+
+const colors = ['#ff0000', '#00ff00']; // Red and Green
+
+const CustomBarChart: React.FC = () => (
+  <ResponsiveContainer width="100%" height={200}>
+    <BarChart data={data}>
+      <CartesianGrid stroke="none" />
+      <XAxis dataKey="year" tick={false} />
+      <YAxis hide={true} tick={false} axisLine={false} />
+      {/* <Tooltip /> */}
+      {/* <Legend /> */}
+      <Bar dataKey="price" fill="#ff0000" />
+      <Bar dataKey="value" fill="#7FFFD4	" />
+    </BarChart>
+  </ResponsiveContainer>
+);
+
+export default CustomBarChart;
